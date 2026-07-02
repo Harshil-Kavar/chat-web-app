@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Chat</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen">
+
+        <div class="login-card">
+
+            <h1>🟢 Office Chat</h1>
+
+            <p>Connect with your colleagues on the same network.</p>
+
+            <input
+                id="username"
+                type="text"
+                maxlength="20"
+                placeholder="Enter your name"
+                autocomplete="off"
+            >
+
+            <button id="join-btn">
+                Join Chat
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CHAT SCREEN -->
+    <div id="chat-screen" class="hidden">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="header-left">
+                🟢 Office Chat
+            </div>
+
+            <div class="header-right">
+
+                <span id="current-user">
+                    👤 -
+                </span>
+
+                <span id="connection-status">
+                    🟢 Connected
+                </span>
+
+            </div>
+
+        </header>
+
+        <!-- Main Layout -->
+        <main class="layout">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+
+                <div class="sidebar-header">
+
+                    Online Users
+
+                    <span id="online-count">(0)</span>
+
+                </div>
+
+                <div id="users-list">
+
+                </div>
+
+            </aside>
+
+            <!-- Chat -->
+            <section class="chat-container">
+
+                <div id="messages">
+
+                </div>
+
+                <div id="typing-indicator">
+
+                </div>
+
+                <div class="message-box">
+
+                    <button id="emoji-btn">
+                        😀
+                    </button>
+
+                    <textarea
+                        id="message-input"
+                        rows="1"
+                        placeholder="Type a message..."
+                    ></textarea>
+
+                    <button id="send-btn">
+                        Send
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/js/socket.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/chat.js"></script>
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
